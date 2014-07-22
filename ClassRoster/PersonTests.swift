@@ -46,4 +46,18 @@ class PersonTests: XCTestCase {
         
         XCTAssertEqual(person.fullName(),first + last, "full name is matching")
     }
+    
+    func testImage() {
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

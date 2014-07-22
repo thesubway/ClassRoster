@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    var people = [Person]()
+class ViewController: UIViewController, UITableViewDataSource {
+    var people = [Person]() //lazy means it does not get instantiated yet.
+    @IBOutlet var tableView : UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.people = self.createList()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView?.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,14 +31,45 @@ class ViewController: UIViewController {
         var getPath = NSBundle.mainBundle().pathForResource("PeopleList", ofType: "plist")
         var peopleArray = NSArray(contentsOfFile: getPath)
         for eachPersonDict in peopleArray {
-            var firstN = eachPersonDict["firstName"]
-            var lastN = eachPersonDict["lastName"]
+            //if let person = eachPersonDict as? Dictionary<String, String>
+            //the as, ensures that it is a dictionary.
+            var firstN = eachPersonDict["firstName"] as String
+            var lastN = eachPersonDict["lastName"] as String
             //var completeName = "\(firstN) \(lastN)"
             var newPerson = Person(firstName: "\(firstN)", lastName: "\(lastN)")
             personList.append(newPerson)
         }
         
         return personList
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var newView = segue.destinationViewController as DetailViewController
+        
+        if segue.identifier == "showPerson" {
+            newView.currentPerson = people[self.tableView!.indexPathForSelectedRow().row]
+        }
+    }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return people.count //how many
+    }
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        //we want to grab a reference for
+        let personForRow = people[indexPath.row]
+        cell.textLabel.text = personForRow.firstName
+        cell.detailTextLabel.text = personForRow.lastName
+        //println(personForRow.firstName + personForRow.lastName)
+        if let personImage = personForRow.image {
+            // show the image
+            cell.imageView.image = personImage
+        } else {
+            // hide the image view
+            //set default image
+        }
+        return cell
     }
 
 }

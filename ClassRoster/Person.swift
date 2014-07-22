@@ -18,9 +18,18 @@ class Person {
     init(firstName : String, lastName : String) {
         self.firstName = firstName
         self.lastName = lastName
+        
     }
     
     func fullName() -> String {
         return self.firstName + self.lastName
     }
+    
+    /*func loadPeopleFromPList () -> Array<Person> {
+        var people = Array<Person>()
+        let plistPath = NSBundle.mainBundle().pathForResource("PeopleList", ofType: "plist")
+        let peopleArray = NSArray(contentsOfFile: plistPath)
+        
+        for person in people
+    } */
 }
