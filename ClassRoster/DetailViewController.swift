@@ -10,10 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet var personImage: UIImageView
     @IBOutlet var firstNameField: UITextField
     @IBOutlet var lastNameField: UITextField
     var currentPerson:Person?
     override func viewDidLoad() {
+        //add the image:
+        personImage.image = UIImage(named:"programmerPerson.jpeg")
+        //personImage.startAnimating()
         if let newPerson = currentPerson {
             firstNameField.text = newPerson.firstName
             lastNameField.text = newPerson.lastName
@@ -26,12 +30,21 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(animated: Bool) {
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveClicked(sender: AnyObject) {
+        if let newPerson = currentPerson {
+            newPerson.firstName = firstNameField.text
+            newPerson.lastName = lastNameField.text
+        }
+    }
 
     /*
     // #pragma mark - Navigation

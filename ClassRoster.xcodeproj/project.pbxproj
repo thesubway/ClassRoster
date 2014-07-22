@@ -17,6 +17,7 @@
 		6DD5561F197D8DF500FC5A88 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5561D197D8AC700FC5A88 /* Person.swift */; };
 		6DD55621197DC6B600FC5A88 /* PeopleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DD55620197DC6B600FC5A88 /* PeopleList.plist */; };
 		6DEB805C197F0DAA00FFA2E3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEB805B197F0DAA00FFA2E3 /* DetailViewController.swift */; };
+		6DEB805E197F29D400FFA2E3 /* programmerPerson.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB805D197F29D400FFA2E3 /* programmerPerson.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		6DD5561D197D8AC700FC5A88 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6DD55620197DC6B600FC5A88 /* PeopleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeopleList.plist; sourceTree = "<group>"; };
 		6DEB805B197F0DAA00FFA2E3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6DEB805D197F29D400FFA2E3 /* programmerPerson.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = programmerPerson.jpeg; path = ../../../Downloads/programmerPerson.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		6DD555F9197D877E00FC5A88 /* ClassRoster */ = {
 			isa = PBXGroup;
 			children = (
+				6DEB805D197F29D400FFA2E3 /* programmerPerson.jpeg */,
 				6DD5561A197D886600FC5A88 /* View */,
 				6DD55619197D879E00FC5A88 /* Controller */,
 				6DD555FC197D877E00FC5A88 /* AppDelegate.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEB805E197F29D400FFA2E3 /* programmerPerson.jpeg in Resources */,
 				6DD55602197D877E00FC5A88 /* Main.storyboard in Resources */,
 				6DD55604197D877E00FC5A88 /* Images.xcassets in Resources */,
 				6DD55621197DC6B600FC5A88 /* PeopleList.plist in Resources */,
