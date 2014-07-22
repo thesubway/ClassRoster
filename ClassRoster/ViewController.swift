@@ -22,17 +22,15 @@ class ViewController: UIViewController {
     }
     func createList() -> [Person] {
         var personList = [Person]()
-        personList.append(Person(firstName: "Victor", lastName: "Adu"))
-        personList.append(Person(firstName: "Collin", lastName: "Atherton"))
-        personList.append(Person(firstName: "John", lastName: "Clem"))
-        personList.append(Person(firstName: "Jeff", lastName: "Gayle"))
-        personList.append(Person(firstName: "Daniel", lastName: "Hoang"))
-        personList.append(Person(firstName: "Brad", lastName: "Johnson"))
-        personList.append(Person(firstName: "Leonardo", lastName: "Lee"))
-        personList.append(Person(firstName: "Alex", lastName: "Rice"))
-        personList.append(Person(firstName: "Kirby", lastName: "Shabaga"))
-        personList.append(Person(firstName: "Michael", lastName: "Tirenin"))
-        personList.append(Person(firstName: "Collin", lastName: "Atherton"))
+        var getPath = NSBundle.mainBundle().pathForResource("PeopleList", ofType: "plist")
+        var peopleArray = NSArray(contentsOfFile: getPath)
+        for eachPersonDict in peopleArray {
+            var firstN = eachPersonDict["firstName"]
+            var lastN = eachPersonDict["lastName"]
+            //var completeName = "\(firstN) \(lastN)"
+            var newPerson = Person(firstName: "\(firstN)", lastName: "\(lastN)")
+            personList.append(newPerson)
+        }
         
         return personList
     }
