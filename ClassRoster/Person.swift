@@ -15,9 +15,14 @@ class Person {
     var lastName : String
     var middleName = "Edward"
     var image : UIImage?
+    var twitterHandle: String?
+    var githubHandle: String?
     init(firstName : String, lastName : String) {
         self.firstName = firstName
         self.lastName = lastName
+        //set these based on firstName and lastName
+        self.twitterHandle = "#\(firstName+lastName)"
+        self.githubHandle = "\(firstName+lastName)"
         
     }
     

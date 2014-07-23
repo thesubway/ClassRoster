@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     var people = [Person]() //lazy means it does not get instantiated yet.
     @IBOutlet var tableView : UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.people = self.createList()
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     } */
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        println(people.count)
         return people.count //how many
     }
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -75,5 +77,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         return cell
     }
-
+    //make the segue by code:
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        println(indexPath.row)
+        
+        let detailViewControl = self.storyboard.instantiateViewControllerWithIdentifier("detailViewControl") as DetailViewController
+        
+        detailViewControl.currentPerson = self.people[indexPath.row]
+        
+        if self.navigationController {
+            self.navigationController.pushViewController(detailViewControl, animated: true)
+        }
+    }
 }
