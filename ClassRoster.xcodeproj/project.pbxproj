@@ -40,7 +40,7 @@
 		6DD55609197D877E00FC5A88 /* ClassRosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD5560E197D877E00FC5A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DD5560F197D877E00FC5A88 /* ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterTests.swift; sourceTree = "<group>"; };
-		6DD5561B197D89BF00FC5A88 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		6DD5561B197D89BF00FC5A88 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonTests.swift; path = ../ClassRoster/PersonTests.swift; sourceTree = "<group>"; };
 		6DD5561D197D8AC700FC5A88 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		6DD55620197DC6B600FC5A88 /* PeopleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeopleList.plist; sourceTree = "<group>"; };
 		6DEB805B197F0DAA00FFA2E3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 				6DD55600197D877E00FC5A88 /* Main.storyboard */,
 				6DD55603197D877E00FC5A88 /* Images.xcassets */,
 				6DD555FA197D877E00FC5A88 /* Supporting Files */,
-				6DD5561B197D89BF00FC5A88 /* PersonTests.swift */,
 				6DD5561D197D8AC700FC5A88 /* Person.swift */,
 			);
 			path = ClassRoster;
@@ -112,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				6DD5560F197D877E00FC5A88 /* ClassRosterTests.swift */,
+				6DD5561B197D89BF00FC5A88 /* PersonTests.swift */,
 				6DD5560D197D877E00FC5A88 /* Supporting Files */,
 			);
 			path = ClassRosterTests;

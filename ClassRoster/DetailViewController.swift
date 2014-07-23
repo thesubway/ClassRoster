@@ -10,9 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet var personImage: UIImageView
-    @IBOutlet var firstNameField: UITextField
-    @IBOutlet var lastNameField: UITextField
+    @IBOutlet var personImage: UIImageView!
+    @IBOutlet var firstNameField: UITextField!
+    @IBOutlet var lastNameField: UITextField!
+    var twitterHandle: String?
+    var githubHandle: String?
     var currentPerson:Person?
     override func viewDidLoad() {
         //add the image:
