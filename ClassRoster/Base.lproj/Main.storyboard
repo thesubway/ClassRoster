@@ -77,45 +77,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-xc-Tn8">
-                                <rect key="frame" x="54" y="275" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-xc-Tn8">
+                                <rect key="frame" x="20" y="204" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="GVc-2q-4EK"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-nK-pBv">
-                                <rect key="frame" x="142" y="389" width="69" height="40"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveClicked:" destination="FgV-kU-m3Q" eventType="touchUpInside" id="NOK-fo-RPO"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a56-Uu-QKJ">
-                                <rect key="frame" x="54" y="237" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a56-Uu-QKJ">
+                                <rect key="frame" x="20" y="166" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="OjJ-XV-N1e"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
-                                <rect key="frame" x="54" y="91" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
+                                <rect key="frame" x="20" y="20" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.11562623403874861" green="0.54668393342391308" blue="0.055650151970231515" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FhB-FT-Tx0"/>
+                                    <constraint firstAttribute="height" constant="128" id="To7-gU-nra"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="fur-Rs-WCn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="ir9-wE-pdf"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spp-4e-FJq">
-                                <rect key="frame" x="54" y="313" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spp-4e-FJq">
+                                <rect key="frame" x="20" y="242" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="v1J-Xs-mMt"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9J-LA-uMm">
-                                <rect key="frame" x="54" y="351" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9J-LA-uMm">
+                                <rect key="frame" x="20" y="280" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -123,7 +120,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-ko-OAa">
-                                <rect key="frame" x="184" y="237" width="92" height="30"/>
+                                <rect key="frame" x="150" y="166" width="92" height="30"/>
                                 <state key="normal" title="ChoosePic">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -131,8 +128,27 @@
                                     <action selector="choosePicPressed:" destination="FgV-kU-m3Q" eventType="touchUpInside" id="6Wn-TH-tRN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-nK-pBv">
+                                <rect key="frame" x="136" y="280" width="69" height="40"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveClicked:" destination="FgV-kU-m3Q" eventType="touchUpInside" id="NOK-fo-RPO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgf-nK-pBv" firstAttribute="leading" secondItem="H9J-LA-uMm" secondAttribute="trailing" constant="8" symbolic="YES" id="3OK-4C-N7r"/>
+                            <constraint firstItem="a56-Uu-QKJ" firstAttribute="top" secondItem="DuW-tx-LUc" secondAttribute="bottom" constant="8" symbolic="YES" id="CIS-Pe-IQa"/>
+                            <constraint firstItem="H9J-LA-uMm" firstAttribute="top" secondItem="spp-4e-FJq" secondAttribute="bottom" constant="8" symbolic="YES" id="CJm-iQ-IIr"/>
+                            <constraint firstItem="m0S-xc-Tn8" firstAttribute="top" secondItem="a56-Uu-QKJ" secondAttribute="bottom" constant="8" symbolic="YES" id="FVN-81-x78"/>
+                            <constraint firstItem="ei8-ko-OAa" firstAttribute="top" secondItem="DuW-tx-LUc" secondAttribute="bottom" constant="8" symbolic="YES" id="OhP-jp-S7e"/>
+                            <constraint firstItem="DuW-tx-LUc" firstAttribute="top" secondItem="97y-uH-zwI" secondAttribute="bottom" id="Pp7-29-cTB"/>
+                            <constraint firstItem="DuW-tx-LUc" firstAttribute="leading" secondItem="hnT-cF-WSx" secondAttribute="leading" constant="20" symbolic="YES" id="V2T-2J-d3w"/>
+                            <constraint firstItem="spp-4e-FJq" firstAttribute="top" secondItem="m0S-xc-Tn8" secondAttribute="bottom" constant="8" symbolic="YES" id="dfo-ML-s5u"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstNameField" destination="a56-Uu-QKJ" id="jrH-nE-5XK"/>
