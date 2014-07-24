@@ -14,7 +14,7 @@ class Person {
     var firstName : String
     var lastName : String
     var middleName = "Edward"
-    var image : UIImage?
+    var personsImage : UIImage?
     var twitterHandle: String?
     var githubHandle: String?
     init(firstName : String, lastName : String) {

@@ -77,10 +77,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
-                                <rect key="frame" x="54" y="91" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.11562623403874861" green="0.54668393342391308" blue="0.055650151970231515" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-xc-Tn8">
                                 <rect key="frame" x="54" y="275" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -106,6 +102,10 @@
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="OjJ-XV-N1e"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
+                                <rect key="frame" x="54" y="91" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.11562623403874861" green="0.54668393342391308" blue="0.055650151970231515" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spp-4e-FJq">
                                 <rect key="frame" x="54" y="313" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -122,6 +122,15 @@
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="FL5-zi-wQY"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-ko-OAa">
+                                <rect key="frame" x="184" y="237" width="92" height="30"/>
+                                <state key="normal" title="ChoosePic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePicPressed:" destination="FgV-kU-m3Q" eventType="touchUpInside" id="6Wn-TH-tRN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -130,6 +139,7 @@
                         <outlet property="githubField" destination="H9J-LA-uMm" id="rSe-5z-wFx"/>
                         <outlet property="lastNameField" destination="m0S-xc-Tn8" id="kaV-Vr-5cO"/>
                         <outlet property="personImage" destination="DuW-tx-LUc" id="bD1-C9-Hmk"/>
+                        <outlet property="saveButton" destination="dgf-nK-pBv" id="T8B-Jf-JmE"/>
                         <outlet property="twitterField" destination="spp-4e-FJq" id="bPG-aG-kN5"/>
                     </connections>
                 </viewController>

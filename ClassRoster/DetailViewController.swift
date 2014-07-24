@@ -7,22 +7,32 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var personImage: UIImageView!
     @IBOutlet var firstNameField: UITextField!
     @IBOutlet var lastNameField: UITextField!
-    
     @IBOutlet var twitterField: UITextField!
     @IBOutlet var githubField: UITextField!
+    @IBOutlet var saveButton: UIButton!
+    
+    
+    let imgPicker = UIImagePickerController()
     
     let textFieldPadding = 100
     
-    var currentPerson:Person?
+    var currentPerson:Person!
     override func viewDidLoad() {
         //add the image:
-        personImage.image = UIImage(named:"programmerPerson.jpeg")
+        if let thisImage = currentPerson.personsImage {
+            //so if they already have an image, that image displays.
+            personImage.image = thisImage
+        }
+        else {
+            personImage.image = UIImage(named:"programmerPerson.jpeg")
+        }
         personImage.layer.borderWidth = 1
         personImage.layer.borderColor = UIColor.greenColor().CGColor
         //cornerRadius makes the corner-lines round.
@@ -43,6 +53,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(animated: Bool) {
+        //create different feature for phone.
+        if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            
+        } else if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone {
+            let saveButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: Selector("saveClicked:"))
+            self.navigationItem.rightBarButtonItem = saveButton
+            self.saveButton?.removeFromSuperview()
+        }
         super.viewWillAppear(animated)
     }
 
@@ -92,4 +110,36 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         
     }
+    
+    @IBAction func choosePicPressed(sender: AnyObject) {
+        println("choosePicPressed")
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            println("Button capture")
+            
+            var imag = UIImagePickerController()
+            imag.delegate = self
+            imag.sourceType = UIImagePickerControllerSourceType.Camera;
+            //imag.mediaTypes = [kUTTypeImage]
+            imag.allowsEditing = false
+            
+            self.presentViewController(imag, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
+        println("snapped the pic yo!!!")
+        picker.dismissViewControllerAnimated(true) {
+            self.personImage.image = info[UIImagePickerControllerOriginalImage] as UIImage
+            if let aPerson = self.currentPerson {
+                aPerson.personsImage = self.personImage.image
+            }
+            println("now navigate next")
+        }
+        
+    }
+    
+    /*func UIImageWriteToSavedPhotosAlbum(image: UIImage!, completionTarget: AnyObject!, completionSelector: Selector, contextInfo: UnsafePointer<()>) {
+        //
+    } */
+
 }

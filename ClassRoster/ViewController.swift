@@ -68,9 +68,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel.text = personForRow.firstName
         cell.detailTextLabel.text = personForRow.lastName
         //println(personForRow.firstName + personForRow.lastName)
-        if let personImage = personForRow.image {
+        if let uniqueImage = personForRow.personsImage {
             // show the image
-            cell.imageView.image = personImage
+            cell.imageView.image = uniqueImage
         } else {
             // hide the image view
             //set default image
