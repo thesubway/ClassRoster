@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func createList() -> [Person] {
         var personList = [Person]()
         var getPath = NSBundle.mainBundle().pathForResource("PeopleList", ofType: "plist")
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             //var completeName = "\(firstN) \(lastN)"
             var newPerson = Person(firstName: "\(firstN)", lastName: "\(lastN)")
             personList.append(newPerson)
+            //scaledToSize:(CGSize)newSize
         }
         
         return personList
@@ -64,35 +66,35 @@ class ViewController: UIViewController, UITableViewDataSource {
         return people.count //how many
     }
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonCell
         //we want to grab a reference for
         let personForRow = people[indexPath.row]
-        cell.textLabel.text = personForRow.firstName
-        cell.detailTextLabel.text = personForRow.lastName
+        //cell.textLabel.text = personForRow.firstName
+        //cell.detailTextLabel.text = personForRow.lastName
+        cell.firstNameLabel.text = personForRow.firstName
+        cell.lastNameLabel.text = personForRow.lastName
+        cell.lastNameLabel.font = UIFont(name: cell.lastNameLabel.font.fontName, size: 12)
+        
         //println(personForRow.firstName + personForRow.lastName)
+        //cell.imageView.contentMode = UIViewContentMode.ScaleToFill
+        //cell.imageView.contentMode = UIViewContentMode.Redraw
         if let uniqueImage = personForRow.personsImage {
             // show the image
-            cell.imageView.image = uniqueImage
-            print(cell.imageView.image.size.width)
-            print(" Is width. Height: ")
-            println(cell.imageView.image.size.height)
+            cell.imageInCell.image = uniqueImage
+//            print(cell.imageView.image.size.width)
+//            print(" Is width. Height: ")
+//            println(cell.imageView.image.size.height)
         } else {
             // hide the image view
             //set default image
             
-            cell.imageView.image = UIImage(named:"programmerPerson.jpeg")
-            print(cell.imageView.image.size.width)
-            print(" Is width. Height: ")
-            print(cell.imageView.image.size.height)
+            cell.imageInCell.image = UIImage(named:"programmerPerson.jpeg")
             //cell.frame.width
         }
+
         //cell.imageView.image.imageOrientation =
         //cell.imageView.image.size.
-        cell.imageView.layer.borderWidth = 1
-        cell.imageView.layer.borderColor = UIColor.greenColor().CGColor
-        cell.imageView.layer.cornerRadius = 5
-        cell.imageView.layer.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        
         return cell
     }
     //make the segue by code:

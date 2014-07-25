@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D843E7119830CF7004C6D3E /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D843E7019830CF7004C6D3E /* PersonCell.swift */; };
 		6DD555FD197D877E00FC5A88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD555FC197D877E00FC5A88 /* AppDelegate.swift */; };
 		6DD555FF197D877E00FC5A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD555FE197D877E00FC5A88 /* ViewController.swift */; };
 		6DD55602197D877E00FC5A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD55600197D877E00FC5A88 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D843E7019830CF7004C6D3E /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		6DD555F7197D877E00FC5A88 /* ClassRoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD555FB197D877E00FC5A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DD555FC197D877E00FC5A88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				6DD555FE197D877E00FC5A88 /* ViewController.swift */,
+				6D843E7019830CF7004C6D3E /* PersonCell.swift */,
 				6DEB805B197F0DAA00FFA2E3 /* DetailViewController.swift */,
 			);
 			name = Controller;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DD5561E197D8AC700FC5A88 /* Person.swift in Sources */,
+				6D843E7119830CF7004C6D3E /* PersonCell.swift in Sources */,
 				6DD555FF197D877E00FC5A88 /* ViewController.swift in Sources */,
 				6DD555FD197D877E00FC5A88 /* AppDelegate.swift in Sources */,
 				6DEB805C197F0DAA00FFA2E3 /* DetailViewController.swift in Sources */,
