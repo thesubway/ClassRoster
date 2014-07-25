@@ -77,23 +77,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-xc-Tn8">
-                                <rect key="frame" x="20" y="204" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-xc-Tn8">
+                                <rect key="frame" x="20" y="194" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Gqw-yO-DM9"/>
+                                    <constraint firstAttribute="height" constant="30" id="hNL-bh-DoP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="GVc-2q-4EK"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a56-Uu-QKJ">
-                                <rect key="frame" x="20" y="166" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a56-Uu-QKJ">
+                                <rect key="frame" x="20" y="156" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oPu-EE-Cdy"/>
+                                    <constraint firstAttribute="width" constant="97" id="spX-J7-6Te"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="OjJ-XV-N1e"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-tx-LUc">
                                 <rect key="frame" x="20" y="20" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.11562623403874861" green="0.54668393342391308" blue="0.055650151970231515" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -103,24 +111,32 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="ir9-wE-pdf"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spp-4e-FJq">
-                                <rect key="frame" x="20" y="242" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spp-4e-FJq">
+                                <rect key="frame" x="20" y="232" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0xT-lc-HJt"/>
+                                    <constraint firstAttribute="width" constant="97" id="w8B-fm-9tn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="v1J-Xs-mMt"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9J-LA-uMm">
-                                <rect key="frame" x="20" y="280" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9J-LA-uMm">
+                                <rect key="frame" x="20" y="270" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f3r-7j-TNh"/>
+                                    <constraint firstAttribute="width" constant="97" id="qBL-Jp-A9J"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="FgV-kU-m3Q" id="FL5-zi-wQY"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-ko-OAa">
-                                <rect key="frame" x="150" y="166" width="92" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-ko-OAa">
+                                <rect key="frame" x="185" y="156" width="75" height="30"/>
                                 <state key="normal" title="ChoosePic">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -128,8 +144,12 @@
                                     <action selector="choosePicPressed:" destination="FgV-kU-m3Q" eventType="touchUpInside" id="6Wn-TH-tRN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-nK-pBv">
-                                <rect key="frame" x="136" y="280" width="69" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-nK-pBv">
+                                <rect key="frame" x="125" y="260" width="69" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FLY-3l-wyG"/>
+                                    <constraint firstAttribute="width" constant="69" id="q9h-oD-MDT"/>
+                                </constraints>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -147,7 +167,13 @@
                             <constraint firstItem="ei8-ko-OAa" firstAttribute="top" secondItem="DuW-tx-LUc" secondAttribute="bottom" constant="8" symbolic="YES" id="OhP-jp-S7e"/>
                             <constraint firstItem="DuW-tx-LUc" firstAttribute="top" secondItem="97y-uH-zwI" secondAttribute="bottom" id="Pp7-29-cTB"/>
                             <constraint firstItem="DuW-tx-LUc" firstAttribute="leading" secondItem="hnT-cF-WSx" secondAttribute="leading" constant="20" symbolic="YES" id="V2T-2J-d3w"/>
+                            <constraint firstItem="spp-4e-FJq" firstAttribute="leading" secondItem="DuW-tx-LUc" secondAttribute="leading" id="XuH-2k-TmF"/>
+                            <constraint firstItem="spp-4e-FJq" firstAttribute="leading" secondItem="a56-Uu-QKJ" secondAttribute="leading" id="brZ-Jy-CTF"/>
+                            <constraint firstItem="spp-4e-FJq" firstAttribute="leading" secondItem="H9J-LA-uMm" secondAttribute="leading" id="cjl-vv-7G7"/>
                             <constraint firstItem="spp-4e-FJq" firstAttribute="top" secondItem="m0S-xc-Tn8" secondAttribute="bottom" constant="8" symbolic="YES" id="dfo-ML-s5u"/>
+                            <constraint firstItem="spp-4e-FJq" firstAttribute="leading" secondItem="m0S-xc-Tn8" secondAttribute="leading" id="hrP-eH-uQu"/>
+                            <constraint firstItem="ei8-ko-OAa" firstAttribute="trailing" secondItem="DuW-tx-LUc" secondAttribute="trailing" id="lW1-6I-deB"/>
+                            <constraint firstItem="dgf-nK-pBv" firstAttribute="bottom" secondItem="H9J-LA-uMm" secondAttribute="bottom" id="pgH-fN-6MA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -161,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6t-5V-mek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1307" y="185"/>
+            <point key="canvasLocation" x="1269" y="231"/>
         </scene>
     </scenes>
 </document>

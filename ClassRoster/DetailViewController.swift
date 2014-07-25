@@ -33,10 +33,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         else {
             personImage.image = UIImage(named:"programmerPerson.jpeg")
         }
+        //attempt to scale it.
+        personImage.contentMode = UIViewContentMode.ScaleAspectFill
         personImage.layer.borderWidth = 1
         personImage.layer.borderColor = UIColor.greenColor().CGColor
         //cornerRadius makes the corner-lines round.
         personImage.layer.cornerRadius = 20
+        personImage.layer.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        personImage.contentMode = UIViewContentMode.ScaleAspectFill
         //personImage.startAnimating()
         if let newPerson = currentPerson {
             firstNameField.text = newPerson.firstName
@@ -132,14 +136,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             self.personImage.image = info[UIImagePickerControllerOriginalImage] as UIImage
             if let aPerson = self.currentPerson {
                 aPerson.personsImage = self.personImage.image
+                //aPerson.personsImage.contentMode = UIViewContentMode.ScaleAspectFill
             }
             println("now navigate next")
         }
         
     }
-    
-    /*func UIImageWriteToSavedPhotosAlbum(image: UIImage!, completionTarget: AnyObject!, completionSelector: Selector, contextInfo: UnsafePointer<()>) {
-        //
-    } */
-
 }

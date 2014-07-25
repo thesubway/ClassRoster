@@ -57,6 +57,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         return 1
     } */
     
+    
+    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         println(people.count)
         return people.count //how many
@@ -71,10 +73,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         if let uniqueImage = personForRow.personsImage {
             // show the image
             cell.imageView.image = uniqueImage
+            print(cell.imageView.image.size.width)
+            print(" Is width. Height: ")
+            println(cell.imageView.image.size.height)
         } else {
             // hide the image view
             //set default image
+            
+            cell.imageView.image = UIImage(named:"programmerPerson.jpeg")
+            print(cell.imageView.image.size.width)
+            print(" Is width. Height: ")
+            print(cell.imageView.image.size.height)
+            //cell.frame.width
         }
+        //cell.imageView.image.imageOrientation =
+        //cell.imageView.image.size.
+        cell.imageView.layer.borderWidth = 1
+        cell.imageView.layer.borderColor = UIColor.greenColor().CGColor
+        cell.imageView.layer.cornerRadius = 5
+        cell.imageView.layer.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         return cell
     }
     //make the segue by code:
