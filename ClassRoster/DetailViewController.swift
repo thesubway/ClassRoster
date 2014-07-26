@@ -133,6 +133,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             self.presentViewController(imag, animated: true, completion: nil)
         }
     }
+    //resets image
+    @IBAction func imageTouched(sender: AnyObject) {
+//        currentPerson.personsImage = UIImage(named:"programmerPerson.jpeg")
+//        self.view.setNeedsDisplay()
+//        self.view.reloadInputViews()
+        var imag = UIImagePickerController()
+        imag.delegate = self
+        imag.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+        //imag.mediaTypes = [kUTTypeImage]
+        imag.allowsEditing = false
+        
+        self.presentViewController(imag, animated: true, completion: nil)
+    }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
         println("snapped the pic yo!!!")
